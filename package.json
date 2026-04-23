@@ -1,5 +1,5 @@
 {
-  "name": "better-jacuzzi-ui-card",
+  "name": "jacuzzi-ui-card",
   "version": "1.0.0",
   "description": "Lovelace card for spa / hot tub climate and switches (e.g. Local Tuya)",
   "keywords": [
@@ -13,10 +13,10 @@
     "spa",
     "hot-tub"
   ],
-  "module": "better-jacuzzi-ui-card.js",
+  "module": "jacuzzi-ui-card.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/morpheus133/better-jacuzzi-ui-card.git"
+    "url": "https://github.com/morpheus133/jacuzzi-ui-card.git"
   },
   "author": "",
   "type": "module",

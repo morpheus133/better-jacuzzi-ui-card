@@ -77,7 +77,7 @@ const computeSchema = memoizeOne(
     ],
 );
 
-@customElement("better-jacuzzi-ui-card-editor")
+@customElement("jacuzzi-ui-card-editor")
 export class JacuzziCardEditor extends LitElement implements LovelaceCardEditor {
     @state() private _config?: JacuzziCardConfig;
     @property({ attribute: false }) public hass!: HomeAssistant;

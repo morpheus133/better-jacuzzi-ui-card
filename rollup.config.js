@@ -60,10 +60,10 @@ const plugins = [
 
 export default [
     {
-        input: "src/better-jacuzzi-ui.ts",
+        input: "src/jacuzzi-ui.ts",
         output: {
             inlineDynamicImports: true,
-            file: "better-jacuzzi-ui-card.js",
+            file: "jacuzzi-ui-card.js",
             format: "es",
         },
         plugins,

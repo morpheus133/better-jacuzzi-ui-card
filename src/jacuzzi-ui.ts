@@ -71,7 +71,7 @@ function registerCustomCard(params: RegisterCardParams) {
 }
 
 registerCustomCard({
-    type: "better-jacuzzi-ui-card",
+    type: "jacuzzi-ui-card",
     name: "Jacuzzi / spa card",
     description: "Climate ring with optional pumps and sanitizer",
 });
@@ -92,18 +92,18 @@ const SWITCH_ICONS: Record<SwitchSlot, string> = {
     sanitizer: mdiRecycle,
 };
 
-@customElement("better-jacuzzi-ui-card")
+@customElement("jacuzzi-ui-card")
 export class BetterJacuzziUi extends LitElement implements LovelaceCard {
     public static async getConfigElement(): Promise<LovelaceCardEditor> {
-        await import("./better-jacuzzi-ui-card-editor");
-        return document.createElement("better-jacuzzi-ui-card-editor") as LovelaceCardEditor;
+        await import("./jacuzzi-ui-card-editor");
+        return document.createElement("jacuzzi-ui-card-editor") as LovelaceCardEditor;
     }
 
     public static async getStubConfig(hass: HomeAssistant): Promise<Record<string, unknown>> {
         const entities = Object.keys(hass.states);
         const climates = entities.filter((e) => e.split(".")[0] === "climate");
         return {
-            type: "custom:better-jacuzzi-ui-card",
+            type: "custom:jacuzzi-ui-card",
             entity: climates[0] ?? "",
         };
     }
@@ -209,7 +209,7 @@ export class BetterJacuzziUi extends LitElement implements LovelaceCard {
             z-index: 1;
             direction: var(--direction);
         }
-        bt-ha-control-circular-slider {
+        jacuzzi-control-circular-slider {
             --primary-color: var(--mode-color);
         }
         .content {
@@ -673,7 +673,7 @@ export class BetterJacuzziUi extends LitElement implements LovelaceCard {
                           tabindex="0"
                       ></ha-icon-button>`}
                 <div class="name">${cfg.name?.length ? cfg.name : html`&nbsp;`}</div>
-                <bt-ha-control-circular-slider
+                <jacuzzi-control-circular-slider
                     .mode=${"start" as const}
                     @value-changed=${this._highChanged}
                     @value-changing=${this._highChanging}
@@ -696,7 +696,7 @@ export class BetterJacuzziUi extends LitElement implements LovelaceCard {
                               </div>
                           `
                         : html``}
-                </bt-ha-control-circular-slider>
+                </jacuzzi-control-circular-slider>
                 ${modes} ${fanRow} ${hasAnySwitch ? switches : html``} ${buttons}
             </ha-card>
         `;

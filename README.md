@@ -12,13 +12,13 @@ Typical source: **Local Tuya** (or any integration) exposing a `climate` entity 
 2. Add this repository as a [custom repository](https://hacs.xyz/docs/faq/custom_repositories/).
 3. Install **Better Jacuzzi UI** and refresh the browser / resources as prompted.
 
-The release artifact is `better-jacuzzi-ui-card.js` at the **repository root** (same path as in [`hacs.json`](hacs.json)), which is what HACS expects on the default branch.
+The release artifact is `jacuzzi-ui-card.js` at the **repository root** (same path as in [`hacs.json`](hacs.json)), which is what HACS expects on the default branch.
 
 ## Configure
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| `type` | string | **Required.** `custom:better-jacuzzi-ui-card` |
+| `type` | string | **Required.** `custom:jacuzzi-ui-card` |
 | `entity` | string | **Required.** Climate entity ID. |
 | `name` | string | Optional title above the ring. |
 | `power` | string | Optional `switch.*` — only shown if set. |
@@ -37,7 +37,7 @@ The release artifact is `better-jacuzzi-ui-card.js` at the **repository root** (
 Example:
 
 ```yaml
-type: custom:better-jacuzzi-ui-card
+type: custom:jacuzzi-ui-card
 entity: climate.thermostat
 name: Spa
 power: switch.power
@@ -55,7 +55,7 @@ npm install --legacy-peer-deps
 npm run build
 ```
 
-Output: `better-jacuzzi-ui-card.js` in the project root. **Commit this file** after `npm run build` so HACS validation on `master` succeeds (the file must exist in Git, not only locally).
+Output: `jacuzzi-ui-card.js` in the project root. **Commit this file** after `npm run build` so HACS validation on `master` succeeds (the file must exist in Git, not only locally).
 
 ## Translations
 
@@ -63,4 +63,4 @@ Strings live under `src/localize/languages/`. The visual editor uses `editor.car
 
 ## Fork note
 
-This project was split from a thermostat-focused codebase; the bundle now contains **only** `better-jacuzzi-ui-card`. After you create the new GitHub repository, set `package.json` → `repository.url` to your clone URL and adjust any badge links you add to this README.
+This project was split from a thermostat-focused codebase; the bundle now contains **only** `jacuzzi-ui-card`. After you create the new GitHub repository, set `package.json` → `repository.url` to your clone URL and adjust any badge links you add to this README.

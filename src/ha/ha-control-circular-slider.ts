@@ -15,7 +15,7 @@ import {
     nothing,
     svg,
   } from "lit";
-  import { customElement, property, query, state } from "lit/decorators.js";
+  import { property, query, state } from "lit/decorators.js";
   import { classMap } from "lit/directives/class-map.js";
   import { ifDefined } from "lit/directives/if-defined.js";
   import { fireEvent } from "./";
@@ -61,8 +61,7 @@ import {
   
   export type ControlCircularSliderMode = "start" | "end" | "full";
   
-  @customElement("bt-ha-control-circular-slider")
-  export class BTHaControlCircularSlider extends LitElement {
+  export class JacuzziControlCircularSlider extends LitElement {
     @property({ type: Boolean, reflect: true })
     public disabled = false;
   
@@ -744,6 +743,11 @@ import {
   
   declare global {
     interface HTMLElementTagNameMap {
-      "bt-ha-control-circular-slider": BTHaControlCircularSlider;
+      "jacuzzi-control-circular-slider": JacuzziControlCircularSlider;
     }
+  }
+
+  // Register custom element with guard to prevent double registration
+  if (!customElements.get("jacuzzi-control-circular-slider")) {
+    customElements.define("jacuzzi-control-circular-slider", JacuzziControlCircularSlider);
   }
