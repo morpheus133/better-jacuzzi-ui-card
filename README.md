@@ -1,16 +1,16 @@
-# Better Jacuzzi UI Card
+# Jacuzzi UI Card
 
 Lovelace card for **spa / hot tub** control in [Home Assistant](https://www.home-assistant.io/): circular **climate** thermostat UI (same interaction pattern as common HA climate cards), optional **fan** modes from the climate entity, optional **switch** tiles (power, jets, filter, bubbles, sanitizer), and optional **error** sensor overlay.
 
 Typical source: **Local Tuya** (or any integration) exposing a `climate` entity plus `switch` helpers.
 
-![Better Jacuzzi UI Card preview](images/card-preview.svg)
+![Jacuzzi UI Card preview](images/card-preview.svg)
 
 ## Install (HACS)
 
 1. In HACS, use **Download from repository** and pick category **Dashboard** (Lovelace / frontend card) — **not** “Integration”. A plain JavaScript card repo is not a Home Assistant integration.
 2. Add this repository as a [custom repository](https://hacs.xyz/docs/faq/custom_repositories/).
-3. Install **Better Jacuzzi UI** and refresh the browser / resources as prompted.
+3. Install **Jacuzzi UI** and refresh the browser / resources as prompted.
 
 The release artifact is `jacuzzi-ui-card.js` at the **repository root** (same path as in [`hacs.json`](hacs.json)), which is what HACS expects on the default branch.
 

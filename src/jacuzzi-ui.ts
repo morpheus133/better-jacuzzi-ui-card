@@ -77,7 +77,7 @@ registerCustomCard({
 });
 
 console.info(
-    `%c  BetterJacuzziUI-CARD \n%c  version: ${CARD_VERSION}    `,
+    `%c  JacuzziUI-CARD \n%c  version: ${CARD_VERSION}    `,
     "color: #00bcd4; font-weight: bold; background: black",
     "color: white; font-weight: bold; background: dimgray",
 );
@@ -93,7 +93,7 @@ const SWITCH_ICONS: Record<SwitchSlot, string> = {
 };
 
 @customElement("jacuzzi-ui-card")
-export class BetterJacuzziUi extends LitElement implements LovelaceCard {
+export class JacuzziUi extends LitElement implements LovelaceCard {
     public static async getConfigElement(): Promise<LovelaceCardEditor> {
         await import("./jacuzzi-ui-card-editor");
         return document.createElement("jacuzzi-ui-card-editor") as LovelaceCardEditor;
